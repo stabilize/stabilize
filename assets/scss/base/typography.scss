@@ -1,0 +1,45 @@
+@import "fonts.scss";
+
+// custom webfonts
+$custom1: "Rubik";
+
+//sans-serif / system font
+$primaryfont: #{$custom1}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji";
+
+
+body,p,li {
+    font-family: $primaryfont;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $primaryfont;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em, i {
+    font-style: italic;
+}
+
+a {
+    text-decoration: underline;
+}
+
+strike {
+    text-decoration: line-through;
+}
+
+
+.small-caps {
+    font-family: $primaryfont;
+	text-transform: uppercase;
+    font-weight: 700;
+   	letter-spacing: 0.2em;
+}
+
+

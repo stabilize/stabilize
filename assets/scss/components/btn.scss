@@ -1,0 +1,69 @@
+.button {
+	display: inline-block;
+	position: relative;
+	color: $midgrey;
+	@include ip('font-size', 320px, 18px, 1920px, 22px);
+	line-height: 28px;
+	background-color: $grey;
+	border: 1px solid $midgrey;
+	padding: 15px 60px 13px;
+	@include ip('padding', 320px, 20px, 1920px, 60px);
+	@include ip('padding-top', 320px, 10px, 1920px, 15px);
+	@include ip('padding-bottom', 320px, 9px, 1920px, 13px);
+	font-weight: 700;
+	transition: all 0.3s ease;
+	&:hover {
+		background-color: $white;
+		color: $grey;
+		//transform: translateX(-10px) translateY(-10px);
+		&:before {
+			//transform: translateX(10px) translateY(10px);
+			border: 1px solid $white;
+		}
+	}
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateX(-10px) translateY(-10px);
+		width: 100%;
+		height: 100%;
+		border: 1px solid $midgrey;
+		z-index: -1;
+		transition: all 0.3s ease;
+	}
+	&.button-small {
+		font-size: 12px;
+		padding: 8px 10px 7px;
+		@media (max-width: 680px) {
+			padding: 8px 18px 7px;
+		}
+	}
+}
+
+.button-blue {
+	display: inline-block;
+	position: relative;
+	color: $blue;
+	@include ip('font-size', 320px, 18px, 1920px, 28px);
+	line-height: 28px;
+	background-color: transparent;
+	border: 2px solid $blue;
+	text-transform: uppercase;
+	padding: 15px 60px 13px;
+	@include ip('padding', 320px, 15px, 1920px, 25px);
+	@include ip('padding-top', 320px, 10px, 1920px, 15px);
+	@include ip('padding-bottom', 320px, 9px, 1920px, 13px);
+	font-weight: 400;
+	transition: all 0.2s ease;
+	&:hover {
+		background-color: $blue;
+		color: $white;
+	}
+	&:first-of-type {
+		// @include ip('margin-right', 320px, 10px, 1920px, 35px);
+	}
+	text-decoration: none;
+}

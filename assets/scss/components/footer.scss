@@ -1,0 +1,60 @@
+footer {
+	position: relative;
+	display: block;
+	top: 0;
+	width: 100%;
+	background-color: $grey;
+	z-index: 10;
+	padding: 55px 0;
+	@include ip('padding-top', 320px, 30px, 1920px, 55px);
+	@include ip('padding-bottom', 320px, 30px, 1920px, 55px);
+	@include ip('font-size', 320px, 14px, 1920px, 22px);
+	z-index: 0;
+	.wrapper {
+		width: calc(100% - 60px);
+		max-width: 1540px;
+		margin: 0 auto;
+		@include flexbox;
+		ul {
+			@include flexbox;
+			width: 100%;
+			li {
+				@include ip('font-size', 320px, 16px, 1920px, 25px);
+				a {
+					color: $white;
+					text-decoration: none;
+					@include ip('font-size', 320px, 16px, 1920px, 25px);
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				br + a {
+					@include ip('font-size', 320px, 16px, 1920px, 20px);
+				}
+				&:first-child {
+					width: 50%;
+					@include sm {
+						width: 25%;
+					}
+				}
+				@include xs-sm {
+					width: 100%;
+					margin-bottom: 7px;
+				}
+			}
+		}
+		p {
+			@include ip('margin-top', 320px, 50px, 1920px, 100px);
+			@include ip('font-size', 320px, 11px, 1920px, 18px);
+			display: block;
+			width: 100%;
+			.logo {
+				max-width: 100px;
+				@include ip('max-width', 320px, 80px, 1920px, 100px);
+				display: block;
+				margin-top: 10px;
+			}
+		}
+	}
+	
+}
