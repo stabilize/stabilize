@@ -238,7 +238,7 @@ header {
 		.software-wrapper {
 			@include flexbox;
 			> div {
-				width: 30%;
+				
 				img {
 					@include ip('margin-bottom', 320px, 10px, 1920px, 30px);
 				}
