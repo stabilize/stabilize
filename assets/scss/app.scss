@@ -232,6 +232,9 @@ header {
 			text-transform: uppercase;
 			@include ip('margin-bottom', 320px, 20px, 1920px, 50px);
 		}
+		p.thick {
+			font-weight: bold;
+		}
 		.software-wrapper {
 			@include flexbox;
 			> div {
