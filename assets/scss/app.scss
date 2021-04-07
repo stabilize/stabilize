@@ -879,8 +879,12 @@ header {
 		margin: 0 auto;
 		width: calc(100% - 80px);
 		align-items: flex-start;
-		@include xs-sm {
+		@include md {
+			justify-content: space-evenly;
 			width: calc(100% - 40px);
+			.video {
+				width: 90%;
+			}
 		}
 		> div {
 			width: 45%;
@@ -1019,12 +1023,10 @@ header {
 
 header .about-wrapper > div {
 	padding-top: 0;
-	width: 45%;
 }
 
 header .about-wrapper > div:last-child {
 	padding: 0;
-	width: 50%;
 }
 
 header {
@@ -1069,3 +1071,21 @@ header {
 	}
 }
 
+.aspect-ratio {
+	position: relative;
+}
+
+.aspect-ratio::before {
+	display: block;
+	content: "";
+	padding-top: calc((var(--height)) / (var(--width)) * 100%);
+}
+
+.aspect-ratio > * {
+	position: absolute;
+	box-sizing: border-box;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
