@@ -879,9 +879,6 @@ header {
 		margin: 0 auto;
 		width: calc(100% - 80px);
 		align-items: flex-start;
-		.video {
-			flex: 1;
-		}
 		@include md {
 			justify-content: space-evenly;
 			width: calc(100% - 40px);
